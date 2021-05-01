@@ -1,5 +1,5 @@
 const formAddTodo = document.querySelector('.form-add-todo')
-const ulInputGroup = document.querySelector('.todo-container')
+const ulInputGroup = document.querySelector('.todos-container')
 const eraseItem = document.querySelector('.fa-times')
 const formSearch = document.querySelector('.form-search input')
 
@@ -25,4 +25,21 @@ ulInputGroup.addEventListener('click', event => {
    if(Array.from(clickedElement.classList).includes('delete')){
      clickedElement.parentElement.remove()
    }
+})
+
+formSearch.addEventListener('input', event => {
+  const inputSearchValue = event.target.value.trim().toLowerCase()
+
+  Array.from(ulInputGroup.children)
+  .filter(task =>  !task.textContent.toLowerCase().includes(inputSearchValue))
+  .forEach(task => {
+    task.classList.remove('d-flex')
+    task.classList.add('hidden')
+  })
+  Array.from(ulInputGroup.children)
+  .filter(task =>  task.textContent.toLowerCase().includes(inputSearchValue))
+  .forEach(task => {
+    task.classList.remove('hidden')
+    task.classList.add('d-flex')
+  })
 })

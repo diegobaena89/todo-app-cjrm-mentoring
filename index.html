@@ -1,54 +1,47 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-  <title>ToDo App</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+  <title>To do List</title>
 </head>
 
-<body style="background-color: #272727;">
-
+<body>
   <div class="container">
 
-    <header class="text-center text-dark my-3">
-      <h1 class="mb-3 text-light font-weight-bold">To-Do List</h1>
+    <header class="text-center text-light">
+      <h1 class="mb-4">Todo List</h1>
       <form class="form-search">
-        <input type="text" class="form-control" name="search" placeholder="Search Task" autofocus>
+        <input class="form-control" type="text" name="search" placeholder="Search Task" autofocus />
       </form>
     </header>
 
-    <ul class="todo-container text-dark list-group mx-auto">
-      <li class="list-group-item d-flex justify-content-between align-items-center">
+    <ul class="todos-container list-group mx-auto text-dark">
+      <li class="list-group-item d-flex justify-content-between align-items-center text-dark">
         <span>Tomar café</span>
         <i class="fas fa-times delete"></i>
       </li>
 
       <li class="list-group-item d-flex justify-content-between align-items-center">
-        <span>Fazer exercícios físicos</span>
+        <span>Ir pra academia</span>
         <i class="fas fa-times delete"></i>
       </li>
 
       <li class="list-group-item d-flex justify-content-between align-items-center">
-        <span>Estudar para provas</span>
+        <span>Fazer exercícios</span>
         <i class="fas fa-times delete"></i>
       </li>
     </ul>
 
-
     <form class="form-add-todo text-center my-4">
-      <label class="text-light">Add Task</label>
-      <input type="text" class="form-control m-auto" name="add">
+      <input class="form-control m-auto" type="text" name="add" placeholder="Add Task" />
     </form>
-
   </div>
 
-
-  <script src="app.js"></script>
+  <script src="./app.js"></script>
 </body>
 
 </html>
